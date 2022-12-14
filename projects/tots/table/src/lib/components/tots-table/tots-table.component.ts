@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { PageEvent } from '@angular/material/paginator';
 import { TotsListResponse } from '@tots/core';
 import { Subject, tap } from 'rxjs';
 import { TotsActionTable } from '../../entities/tots-action-table';
@@ -12,6 +13,8 @@ import { TotsTableConfig } from '../../entities/tots-table-config';
 export class TotsTableComponent implements OnInit {
 
   @Input() config = new TotsTableConfig();
+  @Input() pageIndex: number = 0;
+  @Input() pageSize: number = 50;
 
   @Output() onAction = new EventEmitter<TotsActionTable>();
 
@@ -21,6 +24,15 @@ export class TotsTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadConfig();
+  }
+
+  onClickRow(item: any) {
+    this.onAction.emit({ key: 'click-row', item: item });
+  }
+
+  onPageChange(event: PageEvent) {
+    this.onAction.emit({ key: 'page-change', item: event });
+    this.loadItems();
   }
 
   loadItems() {
