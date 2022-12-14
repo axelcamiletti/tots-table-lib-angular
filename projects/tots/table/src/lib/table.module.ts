@@ -7,17 +7,20 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 
 /** Components */
 import { TotsTableComponent } from './components/tots-table/tots-table.component';
+import { TotsTableApiComponent } from './components/tots-table-api/tots-table-api.component';
 
 /** Columns */
 import { BasePrintColumnComponent } from './columns/base-print-column/base-print-column.component';
 import { StringColumnComponent } from './columns/string-column/string-column.component';
 
 
+
 @NgModule({
   declarations: [
     TotsTableComponent,
     BasePrintColumnComponent,
-    StringColumnComponent
+    StringColumnComponent,
+    TotsTableApiComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +30,7 @@ import { StringColumnComponent } from './columns/string-column/string-column.com
   ],
   exports: [
     TotsTableComponent,
+    TotsTableApiComponent
   ]
 })
 export class TotsTableModule { }

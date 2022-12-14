@@ -24,6 +24,7 @@ export * from './lib/columns/string-column/string-column.component';
  * Components
  */
 export * from './lib/components/tots-table/tots-table.component';
+export * from './lib/components/tots-table-api/tots-table-api.component';
 
 /**
  * Modules
