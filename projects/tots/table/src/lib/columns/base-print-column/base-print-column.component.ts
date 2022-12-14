@@ -1,6 +1,4 @@
 import { Component, Input, ViewContainerRef } from '@angular/core';
-import { Subject } from 'rxjs';
-import { TotsActionTable } from '../../entities/tots-action-table';
 import { TotsColumn } from '../../entities/tots-column';
 
 @Component({
@@ -12,7 +10,6 @@ export class BasePrintColumnComponent {
 
   @Input() column!: TotsColumn;
   @Input() item: any;
-  @Input() onAction!: Subject<TotsActionTable>;
 
   constructor(
     protected viewContainerRef: ViewContainerRef
@@ -22,6 +19,5 @@ export class BasePrintColumnComponent {
     const view = this.viewContainerRef.createComponent(this.column.component);
     (<any>view.instance).column = this.column;
     (<any>view.instance).item = this.item;
-    (<any>view.instance).onAction = this.onAction;
   }
 }

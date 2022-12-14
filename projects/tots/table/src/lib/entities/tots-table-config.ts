@@ -1,9 +1,9 @@
-import { TotsBaseHttpService, TotsQuery } from "@tots/core";
+import { TotsListResponse, TotsQuery } from "@tots/core";
+import { Observable } from "rxjs";
 import { TotsColumn } from "./tots-column";
 
 export class TotsTableConfig {
     id?: string = '';
     columns: Array<TotsColumn> = [];
-    service?: TotsBaseHttpService<any>;
-    query?: TotsQuery = new TotsQuery();
+    obs?: Observable<TotsListResponse<any>>;
 }

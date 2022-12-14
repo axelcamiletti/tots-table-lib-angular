@@ -10,6 +10,7 @@ import { BasePrintColumnComponent } from './columns/base-print-column/base-print
     BasePrintColumnComponent
   ],
   imports: [
+    
   ],
   exports: [
     TotsTableComponent
