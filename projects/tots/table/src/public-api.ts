@@ -15,6 +15,12 @@ export * from './lib/entities/tots-action-table';
 export * from './lib/helpers/tots-table-helper';
 
 /**
+ * Columns
+ */
+export * from './lib/columns/tots-base-column.component';
+export * from './lib/columns/string-column/string-column.component';
+
+/**
  * Components
  */
 export * from './lib/components/tots-table/tots-table.component';

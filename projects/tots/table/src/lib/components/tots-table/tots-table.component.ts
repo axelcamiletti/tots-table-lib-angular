@@ -24,6 +24,7 @@ export class TotsTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadConfig();
+    this.loadItems();
   }
 
   onClickRow(item: any) {
