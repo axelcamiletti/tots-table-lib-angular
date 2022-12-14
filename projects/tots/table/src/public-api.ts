@@ -7,6 +7,12 @@
  */
 export * from './lib/entities/tots-column';
 export * from './lib/entities/tots-table-config';
+export * from './lib/entities/tots-action-table';
+
+/**
+ * Helpers
+ */
+export * from './lib/helpers/tots-table-helper';
 
 /**
  * Components
