@@ -15,6 +15,6 @@
         <tr class="mat-row" *matNoDataRow><td class="mat-cell" colspan="100">No data matching</td></tr>
 
         <!-- Paginator -->
-        <mat-paginator *ngIf="dataItems" [pageIndex]="pageIndex" [length]="dataItems!.total" [pageSize]="pageSize" [pageSizeOptions]="[5, 10, 25, 50, 100]" (page)="onPageChange($event)"></mat-paginator>
+        <mat-paginator *ngIf="dataItems && hasPagination" [pageIndex]="pageIndex" [length]="dataItems!.total" [pageSize]="pageSize" [pageSizeOptions]="[5, 10, 25, 50, 100]" (page)="onPageChange($event)"></mat-paginator>
     </table>
 </div>

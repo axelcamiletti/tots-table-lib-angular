@@ -9,7 +9,9 @@ import { TotsTableConfig } from '../../entities/tots-table-config';
   styleUrls: ['./tots-table-api.component.scss']
 })
 export class TotsTableApiComponent implements OnInit {
+  
   @Input() config = new TotsTableApiConfig();
+  @Input() hasPagination: boolean = true;
 
   @Output() onAction = new EventEmitter<TotsActionTable>();
 

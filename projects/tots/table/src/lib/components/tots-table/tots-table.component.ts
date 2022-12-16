@@ -15,6 +15,7 @@ export class TotsTableComponent implements OnInit {
   @Input() config = new TotsTableConfig();
   @Input() pageIndex: number = 0;
   @Input() pageSize: number = 50;
+  @Input() hasPagination: boolean = true;
 
   @Output() onAction = new EventEmitter<TotsActionTable>();
 
