@@ -24,7 +24,7 @@ export class TotsTableApiComponent implements OnInit {
   onTableAction(action: TotsActionTable) {
     if(action.key == 'page-change'){
       this.config.query.per_page = action.item.pageSize;
-      this.config.query.page = action.item.pageIndex + 1;
+      this.config.query.page = action.item.pageIndex;
     }
 
     this.onAction.emit(action);
