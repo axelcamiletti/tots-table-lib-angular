@@ -18,6 +18,7 @@ export class TotsTableComponent implements OnInit {
   @Input() hasPagination: boolean = true;
 
   @Output() onAction = new EventEmitter<TotsActionTable>();
+  privateActions = new Subject<TotsActionTable>();
 
   isLoading = true;
   dataItems?: TotsListResponse<any>;
@@ -46,6 +47,10 @@ export class TotsTableComponent implements OnInit {
 
   loadConfig() {
     this.loadColumns();
+
+    this.privateActions.subscribe(action => {
+      this.onAction.emit(action);
+    });
   }
 
   loadColumns() {
