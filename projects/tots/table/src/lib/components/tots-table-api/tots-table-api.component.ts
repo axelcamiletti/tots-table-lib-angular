@@ -26,6 +26,8 @@ export class TotsTableApiComponent implements OnInit {
       this.config.query.per_page = action.item.pageSize;
       this.config.query.page = action.item.pageIndex + 1;
     }
+
+    this.onAction.emit(action);
   }
 
   loadConfig() {
