@@ -16,7 +16,7 @@ import { TotsTableModule } from 'projects/tots/table/src/public-api';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    TotsTableModule
+    TotsTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

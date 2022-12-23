@@ -1,0 +1,92 @@
+.tots-table-container{
+  .search-table{
+    position: relative;
+    margin-bottom: 1em;
+
+    input{
+      height: 44px;
+      width: 500px;
+      max-width: 100%;
+      padding-left: 60px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      border-radius: 0px;
+      border: 1px solid rgba($color: #000000, $alpha: 0.1);
+      &:hover{
+        border: 1px solid rgba($color: #000000, $alpha: 0.3);
+      }
+    }
+    svg{
+      position: absolute;
+      top: calc(50% - 12px);
+      left: 20px;
+      opacity: 0.5;
+    }
+  }
+
+  .table-content{
+    overflow-x: auto;
+
+    table{
+      width: 100%;
+    }
+  }
+}
+
+.tots-table-striped{
+  table{
+    tr{
+      &:nth-of-type(even){
+        background-color: rgba($color: #000000, $alpha: 0.025);
+      }
+    }
+  }
+}
+
+.tots-table-row-hover{
+  table{
+    tr{
+      &:hover{
+        td{
+          background-color: rgba($color: #000000, $alpha: 0.05);
+        }
+      }
+    }
+  }
+}
+
+// Dark Table Theme
+.tots-table-dark{
+  .search-table{
+    input{
+      color: white;
+      background-color: #424242;
+    }
+    svg{
+      fill: white;
+    }
+  }
+}
+
+.tots-table-dark.tots-table-striped{
+  table{
+    tr{
+      &:nth-of-type(even){
+        background-color: rgba($color: #ffffff, $alpha: 0.025);
+      }
+    }
+  }
+}
+
+.tots-table-dark.tots-table-row-hover{
+  table{
+    tr{
+      &:hover{
+        td{
+          background-color: rgba($color: #ffffff, $alpha: 0.05);
+        }
+      }
+    }
+  }
+}

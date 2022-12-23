@@ -16,6 +16,9 @@ export class TotsTableComponent implements OnInit {
   @Input() pageIndex: number = 0;
   @Input() pageSize: number = 50;
   @Input() hasPagination: boolean = true;
+  @Input() hasRowHover: boolean = true;
+  @Input() hasStriped: boolean = true;
+  @Input() isDarkTheme: boolean = false;
 
   @Output() onAction = new EventEmitter<TotsActionTable>();
   privateActions = new Subject<TotsActionTable>();
